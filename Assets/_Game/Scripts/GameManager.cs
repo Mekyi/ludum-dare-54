@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,5 +20,10 @@ public class GameManager : MonoBehaviour
 
             return _instance;
         }
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(Game.Scenes.Game);
     }
 }
