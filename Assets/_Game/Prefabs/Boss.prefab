@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3caddb225804c10409c6d6fca22ff8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 5
+  _rotationSpeed: 10
 --- !u!114 &867670442470374105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawner: {fileID: 5077787771630656694}
   _bulletPrefab: {fileID: 8988562405818669327, guid: 4a75cf02a235f9549bcc4ee6b36afacd, type: 3}
-  _bulletInterval: 2
+  _bulletInterval: 0.5
 --- !u!1 &8278228837801170084
 GameObject:
   m_ObjectHideFlags: 0
