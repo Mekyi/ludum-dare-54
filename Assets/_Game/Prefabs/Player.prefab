@@ -125,6 +125,7 @@ MonoBehaviour:
   _baseMovementSpeed: 8
   _dashTime: 0.3
   _dashSpeed: 20
+  _dashInterval: 3
 --- !u!114 &1984036328339231092
 MonoBehaviour:
   m_ObjectHideFlags: 0
