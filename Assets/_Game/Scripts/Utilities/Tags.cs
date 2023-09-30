@@ -4,5 +4,6 @@ namespace Game
     {
         public const string Player = "Player";
         public const string Enemy = "Enemy";
+        public const string Death_field = "Death_field";
     }
 }    
