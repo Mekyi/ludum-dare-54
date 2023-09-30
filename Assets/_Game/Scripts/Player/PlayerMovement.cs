@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         float zMove = Input.GetAxisRaw("Vertical");
 
         Vector3 movement = new Vector3(xMove, 0f, zMove).normalized;
+        transform.rotation = Quaternion.LookRotation(-movement); // turns character model 90 degrees in direction while moving
 
         transform.Translate(movement * _baseMovementSpeed * Time.deltaTime, Space.World);
     }
