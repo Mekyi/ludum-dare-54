@@ -46,6 +46,7 @@ public class BossWeapon : MonoBehaviour
     private void Start()
     {
         _aoeCooldownTimer = _aoeInterval;
+        _targetedAoeCooldownTimer = _targetedAoeInterval;
     }
 
     private void Update()
