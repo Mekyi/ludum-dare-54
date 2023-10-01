@@ -17,6 +17,9 @@ public class AttackIndicatorCircle : MonoBehaviour
     [Range(0, 1)]
     private float _indicatorProgress;
 
+    [SerializeField]
+    private bool _isLineAoe;
+
     // Should this gameobject be destroyed or disabled after AoE has happened? 
     private bool _destroyAfterTriggered;
 
@@ -40,7 +43,15 @@ public class AttackIndicatorCircle : MonoBehaviour
     void Update()
     {
         _indicatorProgress += Time.deltaTime / _attackTimer;
-        _snapshotIndicator.localScale = new Vector3(_indicatorProgress, _indicatorProgress, 0f);
+
+        if (_isLineAoe == false)
+        {
+            _snapshotIndicator.localScale = new Vector3(_indicatorProgress, _indicatorProgress, 0f);
+        }
+        else
+        {
+            _snapshotIndicator.localScale = new Vector3(_snapshotIndicator.localScale.x, _indicatorProgress, 0f);
+        }
         
         if (_indicatorProgress >= 1)
         {

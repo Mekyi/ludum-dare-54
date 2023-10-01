@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BossWeapon : MonoBehaviour
 {
@@ -33,9 +35,18 @@ public class BossWeapon : MonoBehaviour
     [SerializeField]
     private float _targetedAoeInterval = 5f;
 
+    [Header("Line AoE")]
+
+    [SerializeField]
+    private GameObject _lineAoePrefab;
+
+    [SerializeField]
+    private float _lineAoeInterval = 5f;
+
     private float _bulletCooldownTimer;
     private float _aoeCooldownTimer;
     private float _targetedAoeCooldownTimer;
+    private float _lineAoeCooldownTimer;
     private GameObject _player;
 
     private void Awake()
@@ -47,6 +58,7 @@ public class BossWeapon : MonoBehaviour
     {
         _aoeCooldownTimer = _aoeInterval;
         _targetedAoeCooldownTimer = _targetedAoeInterval;
+        _lineAoeCooldownTimer = _lineAoeInterval;
     }
 
     private void Update()
@@ -54,6 +66,31 @@ public class BossWeapon : MonoBehaviour
         ShootBulletAtPlayer();
         ActivateRandomAoes();
         UseTargetedAoes();
+        PlaceLineAoE();
+    }
+
+    private void PlaceLineAoE()
+    {
+        _lineAoeCooldownTimer -= Time.deltaTime;
+
+        if (_lineAoeCooldownTimer > 0)
+        {
+            return;
+        }
+
+        _lineAoeCooldownTimer = _lineAoeInterval;
+
+        GameObject lineAoe = Instantiate(
+                _lineAoePrefab,
+                new Vector3(0f, 1f, 0f),
+                _lineAoePrefab.transform.rotation
+            );
+
+        // Rotate the line AoE randomly around the y axis
+        lineAoe.transform.Rotate(0f, new System.Random().Next(0, 360), 0f, Space.World);
+
+        // Line AoE gameobject should be destroyed at the end of their lifecycle
+        lineAoe.GetComponent<AttackIndicatorCircle>().SetToDestroyAfterSnapshot(true);
     }
 
     private void UseTargetedAoes()
