@@ -387,7 +387,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4231810932652317035, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.02
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 4231810932652317035, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
       propertyPath: m_LocalPosition.y
@@ -499,10 +499,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4524540075795171351, guid: f61e4efd5e880bf45b0755c2f3d352c6, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7533826170044244325, guid: f61e4efd5e880bf45b0755c2f3d352c6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -702,7 +698,8 @@ PrefabInstance:
       value: Arena
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5510090674320003894, guid: e97a9c1b219870849b7188384d9c3787, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97a9c1b219870849b7188384d9c3787, type: 3}

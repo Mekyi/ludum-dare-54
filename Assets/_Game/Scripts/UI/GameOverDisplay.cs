@@ -8,6 +8,7 @@ public class GameOverDisplay : MonoBehaviour
     [SerializeField]
     private GameObject _gameOverScreen;
 
+
     private void OnEnable()
     {
         Player.OnPlayerDead += DisplayGameOver;
@@ -22,4 +23,6 @@ public class GameOverDisplay : MonoBehaviour
     {
         _gameOverScreen.SetActive(true);
     }
+
+    
 }

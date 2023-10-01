@@ -15,4 +15,14 @@ public class Player : MonoBehaviour
             OnPlayerDead?.Invoke();
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == Game.Tags.Death_field)
+        {
+            // Player dies when leaving the death_field
+            OnPlayerDead?.Invoke();
+        }
+
+    }
 }

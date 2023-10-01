@@ -28,4 +28,15 @@ public class BulletMovement : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(direction);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == Game.Tags.Despawner)
+        {
+            // bullet despawns when it leaves the field
+            Destroy(gameObject);
+        }
+
+    }
+
 }
