@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,11 +23,14 @@ public class AttackIndicatorCircle : MonoBehaviour
 
     // Should this gameobject be destroyed or disabled after AoE has happened? 
     private bool _destroyAfterTriggered;
+    private AudioSource _damageSound;
+    private bool _audioPlayed;
 
     private void Awake()
     {
         _collider.enabled = false;
         _indicatorProgress = 0;
+        _damageSound = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -38,6 +42,7 @@ public class AttackIndicatorCircle : MonoBehaviour
     {
         _indicatorProgress = 0;
         _collider.enabled = false;
+        _audioPlayed = false;
     }
 
     void Update()
@@ -57,6 +62,11 @@ public class AttackIndicatorCircle : MonoBehaviour
         {
             _collider.enabled = true;
             StartCoroutine(HandleRemovingAoe());
+            if (_audioPlayed == false)
+            {
+                _damageSound.PlayOneShot(_damageSound.clip);
+                _audioPlayed = true;
+            }
         }
 
         _indicatorProgress = Mathf.Clamp(_indicatorProgress, 0, 1);

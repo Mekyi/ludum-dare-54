@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float _dashTimer;
     private bool _canMove = true;
+    private AudioSource _dashSound;
 
     private void OnEnable()
     {
@@ -31,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+    }
+
+    private void Awake()
+    {
+        _dashSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -67,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         float startTime = Time.time;
         while (Time.time < startTime + _dashTime)
         {
+            _dashSound.Play();
             transform.Translate(movement * _dashSpeed * Time.deltaTime, Space.World); // increases movement speed for a set time
             yield return null;
         }

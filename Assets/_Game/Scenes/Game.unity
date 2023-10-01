@@ -642,6 +642,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5771973605079352591, guid: f01c90b9e5d30f9499284c70c732cf29, type: 3}
+      propertyPath: Priority
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771973605079352591, guid: f01c90b9e5d30f9499284c70c732cf29, type: 3}
+      propertyPath: m_Volume
+      value: 0.231
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -655,6 +663,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128017742423378216, guid: f61e4efd5e880bf45b0755c2f3d352c6, type: 3}
+      propertyPath: _dashTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128017742423378216, guid: f61e4efd5e880bf45b0755c2f3d352c6, type: 3}
+      propertyPath: _baseMovementSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927421751094351167, guid: f61e4efd5e880bf45b0755c2f3d352c6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 846a5945922eeda468e416c9c86d280e, type: 3}
+    - target: {fileID: 6927421751094351167, guid: f61e4efd5e880bf45b0755c2f3d352c6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7533826170044244325, guid: f61e4efd5e880bf45b0755c2f3d352c6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -796,7 +820,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6784898883206247039, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638118300230547714, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638118300230547714, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638118300230547714, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 76236499486237524, guid: f01c90b9e5d30f9499284c70c732cf29, type: 3}
+    - target: {fileID: 8638118300230547714, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638118300230547714, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638118300230547714, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638118300230547714, guid: 58aabffc8960f294791eb68743c62806, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8717723961510675266, guid: 58aabffc8960f294791eb68743c62806, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
