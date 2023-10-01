@@ -72,6 +72,8 @@ MonoBehaviour:
   _aoeInterval: 10
   _targetedAoePrefab: {fileID: 2429551733018744283, guid: 95cab36945d69dd42b009db9ff82673c, type: 3}
   _targetedAoeInterval: 5
+  _lineAoePrefab: {fileID: 5832787771981879968, guid: fdf1618bee4842b4f831ba0a1afe3572, type: 3}
+  _lineAoeInterval: 7
 --- !u!1 &8278228837801170084
 GameObject:
   m_ObjectHideFlags: 0
