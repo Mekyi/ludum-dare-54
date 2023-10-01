@@ -510,14 +510,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 867670442470374105, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
-      propertyPath: _lineAoePrefab
-      value: 
-      objectReference: {fileID: 5832787771981879968, guid: fdf1618bee4842b4f831ba0a1afe3572, type: 3}
-    - target: {fileID: 867670442470374105, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
-      propertyPath: _lineAoeInterval
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 867670442470374105, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
       propertyPath: _arenaAoes.Array.data[0]
       value: 
       objectReference: {fileID: 93371309}
