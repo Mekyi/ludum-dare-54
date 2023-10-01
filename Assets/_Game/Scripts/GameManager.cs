@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     private float _gameLength = 20f;
 
     public static event Action OnPlayerSurvival;
+    private AudioSource _startingSound;
+    private bool _isGameOver;
+    private float _timeTaken;
 
     public static GameManager Instance
     {
@@ -30,11 +33,36 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        _startingSound = GetComponent<AudioSource>(); 
     }
 
     private void Update()
     {
-       IsGameOver();
+        IsGameOver();
+        if (_isGameOver == false) { 
+            _timeTaken = Time.timeSinceLevelLoad;
+        }
+    }
+
+    private void OnEnable()
+    {
+        Player.OnPlayerDead += GameFailed;
+    }
+
+    private void OnDisable()
+    {
+        Player.OnPlayerDead -= GameFailed;
+    }
+
+    private void GameFailed()
+    {
+        _isGameOver = true;
+
+    }
+
+    public void Start()
+    {
+        _startingSound.PlayOneShot(_startingSound.clip);
     }
 
     public void PlayGame()
@@ -45,12 +73,12 @@ public class GameManager : MonoBehaviour
 
     public float AskTime()
     {
-        return _gameLength - Time.timeSinceLevelLoad;
+        return _gameLength - _timeTaken;
     }
 
     private void IsGameOver()
     {
-        if (AskTime() < 0)
+        if (AskTime() < 0 && _isGameOver == false)
         {
             OnPlayerSurvival?.Invoke();
             Time.timeScale = 0f;
