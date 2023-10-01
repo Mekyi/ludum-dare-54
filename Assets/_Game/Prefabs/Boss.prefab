@@ -68,6 +68,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   _aoeInterval: 10
 --- !u!1 &8278228837801170084
 GameObject:
