@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &93371309 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6738254002916013841, guid: e97a9c1b219870849b7188384d9c3787, type: 3}
+  m_PrefabInstance: {fileID: 7527097211876341985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f2c7a21bd54f448d0e57bd42feb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &382533005
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +457,39 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1604642720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2718843896198747681, guid: e97a9c1b219870849b7188384d9c3787, type: 3}
+  m_PrefabInstance: {fileID: 7527097211876341985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f2c7a21bd54f448d0e57bd42feb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1981857770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4676984505606297298, guid: e97a9c1b219870849b7188384d9c3787, type: 3}
+  m_PrefabInstance: {fileID: 7527097211876341985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f2c7a21bd54f448d0e57bd42feb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2025164360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3856283483359205652, guid: e97a9c1b219870849b7188384d9c3787, type: 3}
+  m_PrefabInstance: {fileID: 7527097211876341985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1f2c7a21bd54f448d0e57bd42feb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2784497099173312842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,6 +498,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 867670442470374105, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
+      propertyPath: _arenaAoes.Array.data[0]
+      value: 
+      objectReference: {fileID: 93371309}
+    - target: {fileID: 867670442470374105, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
+      propertyPath: _arenaAoes.Array.data[1]
+      value: 
+      objectReference: {fileID: 1981857770}
+    - target: {fileID: 867670442470374105, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
+      propertyPath: _arenaAoes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1604642720}
+    - target: {fileID: 867670442470374105, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
+      propertyPath: _arenaAoes.Array.data[3]
+      value: 
+      objectReference: {fileID: 2025164360}
     - target: {fileID: 4231810932652317035, guid: 55b6ca9e3779c5b489a221a1ef255983, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17

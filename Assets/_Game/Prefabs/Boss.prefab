@@ -63,6 +63,12 @@ MonoBehaviour:
   _bulletSpawner: {fileID: 5077787771630656694}
   _bulletPrefab: {fileID: 8988562405818669327, guid: 4a75cf02a235f9549bcc4ee6b36afacd, type: 3}
   _bulletInterval: 0.5
+  _arenaAoes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _aoeInterval: 10
 --- !u!1 &8278228837801170084
 GameObject:
   m_ObjectHideFlags: 0
