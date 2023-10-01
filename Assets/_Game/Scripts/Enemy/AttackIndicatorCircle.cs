@@ -51,6 +51,11 @@ public class AttackIndicatorCircle : MonoBehaviour
         _indicatorProgress = Mathf.Clamp(_indicatorProgress, 0, 1);
     }
 
+    public void SetToDestroyAfterSnapshot(bool shouldDestroy)
+    {
+        _destroyAfterTriggered = shouldDestroy;
+    }
+
     private IEnumerator HandleRemovingAoe()
     {
         yield return new WaitForSeconds(0.5f);

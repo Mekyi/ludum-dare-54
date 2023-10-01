@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class BossWeapon : MonoBehaviour
@@ -24,8 +25,17 @@ public class BossWeapon : MonoBehaviour
     [SerializeField]
     private float _aoeInterval = 5f;
 
+    [Header("Targeted AoE")]
+
+    [SerializeField]
+    private GameObject _targetedAoePrefab;
+
+    [SerializeField]
+    private float _targetedAoeInterval = 5f;
+
     private float _bulletCooldownTimer;
     private float _aoeCooldownTimer;
+    private float _targetedAoeCooldownTimer;
     private GameObject _player;
 
     private void Awake()
@@ -42,6 +52,28 @@ public class BossWeapon : MonoBehaviour
     {
         ShootBulletAtPlayer();
         ActivateRandomAoes();
+        UseTargetedAoes();
+    }
+
+    private void UseTargetedAoes()
+    {
+        _targetedAoeCooldownTimer -= Time.deltaTime;
+
+        if (_targetedAoeCooldownTimer > 0)
+        {
+            return;
+        }
+
+        _targetedAoeCooldownTimer = _targetedAoeInterval;
+
+        GameObject targetedAoe = Instantiate(
+                _targetedAoePrefab, 
+                new Vector3(_player.transform.position.x, 1f, _player.transform.position.z),
+                _targetedAoePrefab.transform.rotation
+            );
+
+        // Targeted AoE gameobject should be destroyed at the end of their lifecycle
+        targetedAoe.GetComponent<AttackIndicatorCircle>().SetToDestroyAfterSnapshot(true);
     }
 
     private void ActivateRandomAoes()
