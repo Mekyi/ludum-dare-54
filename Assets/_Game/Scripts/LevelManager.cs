@@ -45,6 +45,7 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }
+        Time.timeScale = 1f; // sets time to move
 
         // Since references to camerar is lost when scene changes, we need to get again
         _mainMenuVirtualCamera = GameObject.FindGameObjectWithTag(Game.Tags.MainMenuCamera)?.GetComponent<CinemachineVirtualCamera>();

@@ -75,10 +75,10 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Dodge(Vector3 movement) // moves character in movement direction for a set distance?
     {
 
+        _dashSound.Play();
         float startTime = Time.time;
         while (Time.time < startTime + _dashTime)
         {
-            _dashSound.Play();
             transform.Translate(movement * _dashSpeed * Time.deltaTime, Space.World); // increases movement speed for a set time
             yield return null;
         }
