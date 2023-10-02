@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260ad55e9241236479ea627f71d25c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseMovementSpeed: 8
-  _dashTime: 0.3
+  _baseMovementSpeed: 12
+  _dashTime: 0.2
   _dashSpeed: 20
   _dashInterval: 3
 --- !u!114 &1984036328339231092
@@ -177,8 +177,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 846a5945922eeda468e416c9c86d280e, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
