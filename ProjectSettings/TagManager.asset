@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Death_field
+  - Despawner
+  - MainMenuCamera
+  - GameCamera
   layers:
   - Default
   - TransparentFX

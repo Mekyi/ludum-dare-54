@@ -71,6 +71,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(Game.Scenes.Game);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(Game.Scenes.MainMenu);
+    }
+
     public float AskTime()
     {
         return _gameLength - _timeTaken;
