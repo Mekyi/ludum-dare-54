@@ -38,8 +38,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _DistortionScale: 17.68
-    - _NoiceScale: 40
-    - _NoisePower: 4.08
+    - _NoiceScale: 16.02
+    - _NoisePower: 3.96
     - _QueueControl: 0
     - _QueueOffset: 0
     - _TwirlStrength: 5.6
