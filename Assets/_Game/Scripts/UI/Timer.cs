@@ -21,7 +21,14 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(TimeLeft % 60);
         int minutes = Mathf.FloorToInt(TimeLeft / 60);
 
-        _timeDisplay.text = string.Format("Time Left: \n{1}:{0}", seconds, minutes);
+        if  (seconds <= 0 && minutes <= 0)
+        {
+            _timeDisplay.text = string.Format("Time Left: \n00:00");
+        } else if (seconds < 10) {
+            _timeDisplay.text = string.Format("Time Left: \n0{1}:0{0}", seconds, minutes);
+        } else {
+            _timeDisplay.text = string.Format("Time Left: \n0{1}:{0}", seconds, minutes);
+        }
 
 
     }
