@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -30,8 +31,12 @@ public class PlayerMovement : MonoBehaviour
         Player.OnPlayerDead -= DisableMovement;
     }
 
-    void Start()
+    private void Start()
     {
+        if (SceneManager.GetActiveScene().name == Game.Scenes.MainMenu)
+        {
+            _canMove = false;
+        }
     }
 
     private void Awake()
